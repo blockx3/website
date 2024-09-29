@@ -49,7 +49,7 @@ export default function Landing() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-black dark:text-white font-sans tracking-tight">
+            <div className="text-4xl md:text-5xl xl:text-6xl font-bold text-black dark:text-white font-sans tracking-tight">
               Turning Ideas into <br />Reality {" "}🤝
               <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
                 <div className="relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-blue-600 via-pink-500 to-green-500 py-4">
@@ -59,17 +59,16 @@ export default function Landing() {
             </div>
           </motion.div>
 
-          <div className="md:ml-16">
+          <div className="gap-4">
             <motion.div
-              className="text-base sm:text-lg md:text-2xl lg:text-3xl relative z-20 mt-5 mb-5 font-medium text-gray-700 font-sans tracking-tight"
+              className="text-lg md:text-xl lg:text-xl xl:text-2xl relative z-20 mt-5 mb-7 font-medium text-gray-700 font-sans tracking-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
-              Open-Source Innovation Through Community Collaboration to, labore sit, impedit maiores dolorem vitae quis in? Veritatis nobis, necessitatibus
-            </motion.div>
+              Blockx3 consists of a team of enthusiastic individuals. We are a community that aims to achieve progress and advancement. Blockx3 is a platform that encourages open source project development by fostering community collaboration            </motion.div>
             <motion.div
-              className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 ml-0 sm:ml-4 md:ml-12 gap-5 mt-4"
+              className="flex flex-col sm:flex-row space-y-1 sm:space-y-0 sm:space-x-4 gap-5 mt-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
@@ -112,7 +111,7 @@ export default function Landing() {
               height={500}
               width={500}
               priority={true}
-              className="h-[200px] w-[200px] sm:h-[300px] sm:w-[300px] md:h-[400px] md:w-[400px] lg:h-[500px] lg:w-[500px] rounded-lg p-4 drop-shadow-2xl"
+              className="h-[350px] w-[350px] sm:h-[400px] sm:w-[400px] md:h-[400px] md:w-[400px] lg:h-[500px] lg:w-[500px] rounded-lg p-4 drop-shadow-2xl"
             />
           </motion.div>
         </div>
