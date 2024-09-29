@@ -1,17 +1,18 @@
 "use client";
-import Image from "next/image";
-import Footer from "./ui/Footer";
-import { MotionDiv } from "./UseClient_UIs";
-import { BgAnimateButton } from "./ui/CultUI/AnimatedButtons";
+// import Image from "next/image";
+// import Footer from "./ui/Footer";
+// import { MotionDiv } from "./UseClient_UIs";
+// import { BgAnimateButton } from "./ui/CultUI/AnimatedButtons";
 import { useRef } from "react";
 import FAQ from "./FAQ";
 import About from "./About";
+import Footer from "./ui/Footer";
 
 function HomePage() {
   const myRef = useRef<HTMLDivElement | null>(null);
   return (
     <div>
-      <div className="h-screen flex items-center">
+      {/* <div className="h-screen flex items-center">
         <div className="flex md:flex-row flex-col justify-between w-full">
           <div className="flex md:order-last pt-7 md:pt-0 justify-center w-full">
             <MotionDiv
@@ -65,7 +66,7 @@ function HomePage() {
           </div>
 
         </div>
-      </div>
+      </div> */}
 
       {/* Footer */}
       <div className="h-screen flex flex-col justify-between" id="about">
