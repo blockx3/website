@@ -25,7 +25,7 @@ export default function Landing() {
           }}
         />
         <motion.div
-          className="absolute bottom-0 right-0 w-64 h-64 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-70"
+          className="absolute bottom-0 right-0 w-64 h-64 bg-green-300 rounded-full mix-blend-multiply filter blur-xl opacity-70"
           animate={{
             scale: [1, 2, 2, 1, 1],
             rotate: [0, 0, 270, 270, 0],
