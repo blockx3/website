@@ -9,7 +9,7 @@ export default function Faqs() {
     return (
         <div className="w-full min-h-screen bg-gradient-to-b from-purple-200 to-pink-200 flex flex-col justify-center items-center p-5 md:p-10">
             <div className="max-w-5xl w-full bg-white rounded-2xl shadow-xl p-6 md:p-10">
-                <h2 className="text-center text-3xl md:text-4xl font-bold mb-8 text-purple-800">
+                <h2 className="text-center text-3xl md:text-4xl font-bold mb-8 text-slate-800">
                     Frequently Asked Questions
                 </h2>
                 <Accordion type="single" collapsible className="w-full space-y-4">
