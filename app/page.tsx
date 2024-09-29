@@ -1,5 +1,5 @@
 import Faqs from "@/components/Faqs";
-import HomePage from "@/components/HomePage";
+// import HomePage from "@/components/HomePage";
 import Landing from "@/components/Landing";
 
 function Home() {
@@ -7,7 +7,7 @@ function Home() {
     <div>
       <Landing />
       <Faqs />
-      <HomePage />
+      {/* <HomePage /> */}
     </div>
   );
 }
