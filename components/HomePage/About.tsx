@@ -34,8 +34,8 @@ export default function About() {
               <div className="lg:text-2xl text-slate-500">
                 We are a group of passionate people who create open-source
                 projects, support new ideas, and help them grow. Our community
-                is focused on working together to achieve progress and
-                development.
+                focuses on developing innovative software and supporting
+                individual developers by contributing to their projects.
               </div>
             </div>
           </ShineBorder>
@@ -60,9 +60,9 @@ export default function About() {
                 <div className="lg:text-2xl text-slate-500">
                   BlockX3 is a platform that helps people work together on
                   open-source projects. We create open-source software and
-                  welcome anyone with a new idea. We support the development of
-                  these projects, working as a community to help everyone grow
-                  and succeed. Some of us want to build the next big tech
+                  welcome anyone with a novel idea. We support the development
+                  of these projects, working as a community to help everyone
+                  grow and succeed. Some of us want to build the next big tech
                   company, some want to learn, and others want to share their
                   skills. We all share a passion for growth, learning, and
                   trying new things, which brings us together as a group. We
