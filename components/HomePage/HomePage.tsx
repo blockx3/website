@@ -3,10 +3,9 @@ import React, { useRef } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 // import About from "./About";
-// import FAQs from "./FAQs";
-import { Button } from '../ui/button';
 import FAQs from './FAQs';
-
+import { Button } from '../ui/button';
+import { ScrollAnimation } from '@/components/ScrollAnimation';
 export default function HomePage() {
   const SecondRef = useRef<HTMLDivElement | null>(null);
   return (
@@ -127,13 +126,9 @@ export default function HomePage() {
           </div>
         </main>
       </div>
-      <div
-        id="second"
-        ref={SecondRef}
-        className="min-h-screen w-full bg-gradient-to-b from-purple-200 to-pink-200"
-      >
+      <ScrollAnimation RefForScroll={SecondRef} />
+      <div id="second" className="min-h-screen w-full bg-gradient-to-b from-purple-200 to-pink-200">
         {/* <About /> */}
-
         <FAQs />
       </div>
     </>

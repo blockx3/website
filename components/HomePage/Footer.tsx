@@ -43,9 +43,6 @@ const Footer: React.FC = () => {
               Driving <span className="font-bold">Innovation</span> into{' '}
               <span className="font-bold">Reality</span>
             </p>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              © {currentYear} <span>All rights reserved.</span>
-            </p>
           </div>
           <div className="flex flex-col justify-start md:items-center md:justify-center">
             <h3 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">

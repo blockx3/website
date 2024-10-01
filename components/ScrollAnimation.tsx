@@ -9,9 +9,13 @@ interface TextParallaxContentProps {
   children: ReactNode;
 }
 
-export const ScrollAnimation: React.FC = () => {
+export function ScrollAnimation({
+  RefForScroll,
+}: {
+  RefForScroll: React.MutableRefObject<HTMLDivElement | null>;
+}) {
   return (
-    <div className="bg-gray-300">
+    <div className="bg-gray-300" ref={RefForScroll}>
       <TextParallaxContent
         imgUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         subheading="Collaborate"
@@ -21,14 +25,14 @@ export const ScrollAnimation: React.FC = () => {
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        subheading="Quality"
-        heading="Never compromise."
+        subheading="Thrive"
+        heading="In Our Community."
       >
         <WhatWeDo />
       </TextParallaxContent>
     </div>
   );
-};
+}
 
 const IMG_PADDING = 12;
 
@@ -144,9 +148,9 @@ const WhoAreWe: React.FC = () => (
     <h2 className="col-span-1 text-3xl font-bold md:col-span-4">Who are we ?</h2>
     <div className="col-span-1 md:col-span-8">
       <p className="mb-4 text-xl text-neutral-700 md:text-2xl">
-        We are a group of passionate people who create open-source projects, support new ideas, and
-        help them grow. Our community is focused on working together to achieve progress and
-        development.
+        We are a group of passionate people who create open-source projects, support naval ideas,
+        and help them grow. Our community focuses on developing innovative software and supporting
+        individual developers by contributing to their projects.
       </p>
     </div>
   </div>
