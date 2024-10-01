@@ -20,7 +20,7 @@ const FAQs = () => {
       animate="visible"
       variants={fadeIn}
       transition={{ duration: 0.5 }}
-      className="h-screen w-full rounded-3xl bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 px-4 py-10 shadow-2xl lg:px-20 lg:py-24"
+      className="h-screen w-full bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 px-4 py-10 lg:px-20 lg:py-24"
     >
       <motion.h2
         className="mb-9 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text pb-8 text-3xl font-bold text-transparent lg:text-5xl"
@@ -33,10 +33,10 @@ const FAQs = () => {
         {faqData.map((faq, index) => (
           <motion.div key={faq.id} variants={fadeIn} transition={{ delay: 0.1 * (index + 1) }}>
             <AccordionItem value={faq.id} className="border-none">
-              <AccordionTrigger className="rounded-xl bg-white bg-opacity-50 p-4 text-xl font-semibold text-gray-800 transition-all duration-300 hover:bg-opacity-75 hover:text-purple-700 lg:text-2xl">
+              <AccordionTrigger className="rounded-xl bg-white bg-opacity-50 p-4 text-xl font-semibold text-gray-700 transition-all duration-300 hover:bg-opacity-75 hover:text-purple-700 lg:text-2xl">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="mt-2 rounded-xl bg-white bg-opacity-25 p-4 text-gray-800 lg:text-lg">
+              <AccordionContent className="mt-2 rounded-xl bg-white bg-opacity-25 p-4 text-black lg:text-lg">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
