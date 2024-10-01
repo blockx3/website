@@ -2,10 +2,10 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Footer from "./Footer";
-import About from "./About";
-import FAQs from "./FAQs";
+// import About from "./About";
+// import FAQs from "./FAQs";
 import { Button } from "../ui/button";
+import FAQs from "./FAQs";
 
 export default function HomePage() {
   const SecondRef = useRef<HTMLDivElement | null>(null);
@@ -132,10 +132,10 @@ export default function HomePage() {
         ref={SecondRef}
         className="w-full min-h-screen bg-gradient-to-b from-purple-200 to-pink-200"
       >
-        <About />
+        {/* <About /> */}
+        
         <FAQs />
       </div>
-      <Footer />
     </>
   );
 }
