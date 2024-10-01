@@ -1,5 +1,5 @@
-import HomePage from "@/components/HomePage/HomePage";
-import { ScrollAnimation } from "@/components/ScrollAnimation";
+import HomePage from '@/components/HomePage/HomePage';
+import { ScrollAnimation } from '@/components/ScrollAnimation';
 function Home() {
   return (
     <div>
