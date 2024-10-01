@@ -1,11 +1,14 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Twitter, Linkedin, Github, LucideIcon } from 'lucide-react';
+import { Twitter, Linkedin, Github, Youtube } from 'lucide-react';
+import { FaDiscord, FaTelegram } from 'react-icons/fa6';
 
 interface SocialIconProps {
   href: string;
-  icon: LucideIcon;
+  icon: any;
   hoverColor: string;
 }
 
@@ -19,28 +22,13 @@ const SocialIcon: React.FC<SocialIconProps> = ({ href, icon: Icon, hoverColor })
   </Link>
 );
 
-interface FooterLinkProps {
-  href: string;
-  children: React.ReactNode;
-}
-
-const FooterLink: React.FC<FooterLinkProps> = ({ href, children }) => (
-  <Link
-    href={href}
-    target="_blank"
-    className="mb-2 block text-sm text-gray-600 transition-colors duration-300 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
-  >
-    {children}
-  </Link>
-);
-
 const Footer: React.FC = () => {
-  // const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-gradient-to-br from-blue-100 to-purple-300 px-4 py-12 text-gray-600 transition-colors duration-300 dark:from-gray-800 dark:to-gray-900 dark:text-gray-300 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          <div className="col-span-1 md:col-span-2">
+        <div className="flex flex-col justify-between space-y-16 md:flex-row md:space-y-0">
+          <div className="flex flex-col">
             <div className="mb-6 flex items-center">
               <Image
                 src="https://static.aaraz.me/blockx3/blockx3_nobg.png"
@@ -51,6 +39,18 @@ const Footer: React.FC = () => {
               />
               <span className="text-xl font-bold text-gray-900 dark:text-white">BLOCKX3</span>
             </div>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              Driving <span className="font-bold">Innovation</span> into{' '}
+              <span className="font-bold">Reality</span>
+            </p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              © {currentYear} <span>All rights reserved.</span>
+            </p>
+          </div>
+          <div className="flex flex-col justify-start md:items-center md:justify-center">
+            <h3 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+              GET CONNECTED
+            </h3>
             <div className="mb-6 flex space-x-4">
               <SocialIcon
                 href="https://github.com/blockx3/"
@@ -62,32 +62,27 @@ const Footer: React.FC = () => {
                 icon={Linkedin}
                 hoverColor="hover:text-blue-600"
               />
-
+              <SocialIcon
+                href="https://t.me/blockx3/458"
+                icon={FaTelegram}
+                hoverColor="hover:text-blue-400"
+              />
+              <SocialIcon
+                href="https://www.youtube.com/@blockx3"
+                icon={Youtube}
+                hoverColor="hover:text-red-600"
+              />
+              <SocialIcon
+                href="https://discord.com/invite/p7NQXeDqwD"
+                icon={FaDiscord}
+                hoverColor="hover:text-indigo-600"
+              />
               <SocialIcon
                 href="https://x.com/block_x3"
                 icon={Twitter}
                 hoverColor="hover:text-blue-400"
               />
             </div>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              Driving <span className="font-bold">Innovation</span> into{' '}
-              <span className="font-bold">Reality</span>
-            </p>
-            {/* <p className="text-sm text-gray-500 dark:text-gray-400">
-              © {currentYear} <span className="font-bold">BLOCKX3</span>{" "}
-              Foundation. All rights reserved.
-            </p> */}
-          </div>
-          <div>
-            <h3 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">BLOCKX3</h3>
-            <FooterLink href="https://github.com/orgs/blockx3/repositories">Projects</FooterLink>
-          </div>
-          <div>
-            <h3 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
-              GET CONNECTED
-            </h3>
-            <FooterLink href="https://github.com/blockx3/">Telegram</FooterLink>
-            <FooterLink href="https://github.com/blockx3/">Discord</FooterLink>
           </div>
         </div>
       </div>

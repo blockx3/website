@@ -36,7 +36,7 @@ const FAQs = () => {
               <AccordionTrigger className="rounded-xl bg-white bg-opacity-50 p-4 text-xl font-semibold text-gray-800 transition-all duration-300 hover:bg-opacity-75 hover:text-purple-700 lg:text-2xl">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="mt-2 rounded-xl bg-white bg-opacity-25 p-4 text-gray-600 lg:text-lg">
+              <AccordionContent className="mt-2 rounded-xl bg-white bg-opacity-25 p-4 text-gray-800 lg:text-lg">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

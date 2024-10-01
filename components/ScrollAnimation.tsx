@@ -26,13 +26,6 @@ export const ScrollAnimation: React.FC = () => {
       >
         <WhatWeDo />
       </TextParallaxContent>
-      <TextParallaxContent
-        imgUrl="https://www.asaecenter.org/-/media/ASAE/Images/Resources/Articles/AN_Plus/2017/March/schmidt_zimmer_engaging_members_in_online_communities/schmidt_zimmer_engaging_members_in_online_communities_39x22.ashx?h=440&w=780&la=en&hash=9818F472ABEAA63452F80AFDDEB4B787994A4F0B"
-        subheading="Modern"
-        heading="Dress for the best."
-      >
-        <WhatWeDo />
-      </TextParallaxContent>
     </div>
   );
 };
@@ -132,7 +125,7 @@ const WhatWeDo: React.FC = () => (
   <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
     <h2 className="col-span-1 text-3xl font-bold md:col-span-4">What we do?</h2>
     <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
+      <p className="mb-4 text-xl text-neutral-700 md:text-2xl">
         BlockX3 is a collaborative platform designed to facilitate teamwork on open-source projects.
         We focus on developing open-source software and invite individuals with innovative ideas to
         join us. Our community is dedicated to nurturing these projects, fostering an environment
@@ -150,7 +143,7 @@ const WhoAreWe: React.FC = () => (
   <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
     <h2 className="col-span-1 text-3xl font-bold md:col-span-4">Who are we ?</h2>
     <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
+      <p className="mb-4 text-xl text-neutral-700 md:text-2xl">
         We are a group of passionate people who create open-source projects, support new ideas, and
         help them grow. Our community is focused on working together to achieve progress and
         development.
