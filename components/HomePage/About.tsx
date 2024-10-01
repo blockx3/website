@@ -33,9 +33,8 @@ export default function About() {
               </div>
               <div className="text-slate-500 lg:text-2xl">
                 We are a group of passionate people who create open-source projects, support new
-                ideas, and help them grow. Our community
-                focuses on developing innovative software and supporting
-                individual developers by contributing to their projects.
+                ideas, and help them grow. Our community focuses on developing innovative software
+                and supporting individual developers by contributing to their projects.
               </div>
             </div>
           </ShineBorder>
@@ -57,17 +56,15 @@ export default function About() {
                 <div className="pb-2 text-lg underline underline-offset-4 lg:pb-6 lg:text-4xl">
                   What we do ?
                 </div>
-                <div className="lg:text-2xl text-slate-500">
-                  BlockX3 is a platform that helps people work together on
-                  open-source projects. We create open-source software and
-                  welcome anyone with a novel idea. We support the development
-                  of these projects, working as a community to help everyone
-                  grow and succeed. Some of us want to build the next big tech
-                  company, some want to learn, and others want to share their
-                  skills. We all share a passion for growth, learning, and
-                  trying new things, which brings us together as a group. We
-                  chose the name &quot;BlockX3&quot; to show that we are united
-                  as one & we aim to surpass our own expectations by threefold.
+                <div className="text-slate-500 lg:text-2xl">
+                  BlockX3 is a platform that helps people work together on open-source projects. We
+                  create open-source software and welcome anyone with a novel idea. We support the
+                  development of these projects, working as a community to help everyone grow and
+                  succeed. Some of us want to build the next big tech company, some want to learn,
+                  and others want to share their skills. We all share a passion for growth,
+                  learning, and trying new things, which brings us together as a group. We chose the
+                  name &quot;BlockX3&quot; to show that we are united as one & we aim to surpass our
+                  own expectations by threefold.
                 </div>
               </div>
             </div>
