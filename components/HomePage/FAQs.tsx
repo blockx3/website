@@ -1,53 +1,71 @@
+'use client';
+import React from 'react';
+import { motion } from 'framer-motion';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-function FAQs() {
+} from '@/components/ui/accordion';
+
+const FAQs = () => {
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
-    <div className="w-full bg-gradient-to-b to-purple-200 from-pink-200 px-2 py-3 lg:px-10 lg:py-20">
-      <div className="lg:text-4xl text-lg lg:pb-3 md:text-4xl underline underline-offset-8 font-bold text-slate-800">
-        FAQs
-      </div>
-      <Accordion type="single" collapsible className="">
-        <AccordionItem value="item-1" className="border-b border-purple-200">
-          <AccordionTrigger className="lg:text-2xl font-semibold text-slate-700 hover:text-slate-900">
-            BlockX3 is a community or Organization ?
-          </AccordionTrigger>
-          <AccordionContent className="text-gray-600 pb-4 lg:text-lg">
-            We are both, we are a community of developers, designers, and
-            creators who collaborate on projects. We also run our own
-            organizational projects to support the community and ensure its
-            sustainability.
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-2" className="border-b border-purple-200">
-          <AccordionTrigger className="lg:text-2xl font-semibold text-slate-700 hover:text-slate-900">
-            Can BlockX3 help me develop my idea into product ?
-          </AccordionTrigger>
-          <AccordionContent className="text-gray-600 pb-4 lg:text-lg">
-            Yes absolutely, since We are a community, we are enthusiastic to
-            grow together and help each other. We can help you develop your idea
-            into a product. Our community exist because Some of us want to build
-            the next big tech company, some want to learn, and others want to
-            share their skills.
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-3" className="border-b border-purple-200">
-          <AccordionTrigger className="lg:text-2xl font-semibold text-slate-700 hover:text-slate-900">
-            What happens if a community project becomes successful?
-          </AccordionTrigger>
-          <AccordionContent className="text-gray-600 pb-4 lg:text-lg">
-            If a project has potential and grows massively, it remains the
-            project of its creator(s). Our community encourages this growth
-            while maintaining the creator ownership, allowing them to use the
-            project as they see fit.
-          </AccordionContent>
-        </AccordionItem>
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={fadeIn}
+      transition={{ duration: 0.5 }}
+      className="h-screen w-full rounded-3xl bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 px-4 py-10 shadow-2xl lg:px-20 lg:py-24"
+    >
+      <motion.h2
+        className="mb-9 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text pb-8 text-3xl font-bold text-transparent lg:text-5xl"
+        variants={fadeIn}
+        transition={{ delay: 0.2 }}
+      >
+        Frequently Asked Questions :
+      </motion.h2>
+      <Accordion type="single" collapsible className="space-y-9">
+        {faqData.map((faq, index) => (
+          <motion.div key={faq.id} variants={fadeIn} transition={{ delay: 0.1 * (index + 1) }}>
+            <AccordionItem value={faq.id} className="border-none">
+              <AccordionTrigger className="rounded-xl bg-white bg-opacity-50 p-4 text-xl font-semibold text-gray-800 transition-all duration-300 hover:bg-opacity-75 hover:text-purple-700 lg:text-2xl">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="mt-2 rounded-xl bg-white bg-opacity-25 p-4 text-gray-600 lg:text-lg">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
+          </motion.div>
+        ))}
       </Accordion>
-    </div>
+    </motion.div>
   );
-}
+};
+
+const faqData = [
+  {
+    id: 'item-1',
+    question: 'Is BlockX3 a community or organization?',
+    answer:
+      'We are both! BlockX3 is a vibrant community of developers, designers, and creators who collaborate on exciting projects. Additionally, we run organizational projects to support our community and ensure its long-term sustainability.',
+  },
+  {
+    id: 'item-2',
+    question: 'Can BlockX3 help develop my idea into a product?',
+    answer:
+      'Absolutely! As a community, we are enthusiastic about growing together and helping each other. Whether you want to build the next big tech company, learn new skills, or share your expertise, we are here to support you in developing your idea into a tangible product.',
+  },
+  {
+    id: 'item-3',
+    question: 'What happens if a community project becomes successful?',
+    answer:
+      'If a project shows great potential and experiences significant growth, it remains the property of its creator(s). Our community encourages this growth while respecting creator ownership, allowing them full control over how they use and develop their project.',
+  },
+];
 
 export default FAQs;
