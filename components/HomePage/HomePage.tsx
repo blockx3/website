@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import FAQs from './FAQs';
 import { Button } from '../ui/button';
 import { ScrollAnimation } from '@/components/ScrollAnimation';
+import { Vision } from './Vision';
 export default function HomePage() {
   const SecondRef = useRef<HTMLDivElement | null>(null);
   return (
@@ -126,6 +127,7 @@ export default function HomePage() {
           </div>
         </main>
       </div>
+      <Vision />
       <ScrollAnimation RefForScroll={SecondRef} />
       <div id="second" className="min-h-screen w-full bg-gradient-to-b from-purple-200 to-pink-200">
         {/* <About /> */}
