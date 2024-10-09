@@ -1,6 +1,6 @@
 'use client';
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import {
   Accordion,
   AccordionContent,
@@ -8,7 +8,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
-const FAQs = () => {
+function FAQs() {
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -20,13 +20,13 @@ const FAQs = () => {
         initial="hidden"
         animate="visible"
         variants={fadeIn}
-        transition={{ duration: 0.5 }}
-        className="h-screen w-full bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 px-4 py-10 lg:px-20 lg:py-24"
+        transition={{ duration: 0.1 }}
+        className="w-full bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 px-4 py-10 lg:px-20 lg:py-24"
       >
         <motion.h2
           className="mb-9 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text pb-8 text-3xl font-bold text-transparent lg:text-5xl"
           variants={fadeIn}
-          transition={{ delay: 0.2 }}
+          transition={{ duration: 0.2 }}
         >
           Frequently Asked Questions :
         </motion.h2>
@@ -47,7 +47,7 @@ const FAQs = () => {
       </motion.div>
     </>
   );
-};
+}
 
 const faqData = [
   {

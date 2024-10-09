@@ -52,8 +52,8 @@ export default function ContactSection() {
   };
 
   return (
-    <Card className="mx-auto w-full max-w-4xl transform overflow-hidden rounded-xl bg-blue-100 shadow-lg transition-all duration-500 hover:shadow-xl dark:bg-gray-800">
-      <CardHeader className="rounded-t-xl bg-blue-100 p-10 text-center">
+    <Card className="mx-auto w-full max-w-4xl overflow-hidden rounded-none bg-transparent transition-all duration-500">
+      <CardHeader className="bg-transparent p-10 text-center">
         <CardTitle className="text-4xl font-extrabold text-gray-900 dark:text-gray-100">
           Contact Us
         </CardTitle>

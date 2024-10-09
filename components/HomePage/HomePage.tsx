@@ -2,7 +2,6 @@
 import React, { useRef } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-// import About from "./About";
 import FAQs from './FAQs';
 import { Button } from '../ui/button';
 import { ScrollAnimation } from '@/components/ScrollAnimation';
@@ -118,6 +117,7 @@ export default function HomePage() {
               <Image
                 src="https://static.aaraz.me/blockx3/blockx3_nobg.png"
                 alt="Turning Ideas into Reality"
+                fetchPriority="high"
                 height={500}
                 width={500}
                 priority={true}
@@ -128,11 +128,17 @@ export default function HomePage() {
         </main>
       </div>
       <ScrollAnimation RefForScroll={SecondRef} />
-      <div id="second" className="min-h-screen w-full bg-gradient-to-b from-purple-200 to-pink-200">
-        {/* <About /> */}
-        <FAQs />
-      </div>
-      <div className="flex min-h-screen w-full items-center justify-center bg-gradient-to-b from-purple-200 to-pink-200">
+      <FAQs />
+      <div className="items-center bg-gradient-to-b from-purple-200 to-pink-200 lg:flex">
+        <div className="mx-auto max-h-[500px] max-w-[800px]">
+          <Image
+            src={'https://static.aaraz.me/blockx3/contact_us.png'}
+            width={1000}
+            height={1000}
+            alt=""
+            className=""
+          />
+        </div>
         <ContactSection />
       </div>
     </>
