@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import FAQs from './FAQs';
 import { Button } from '../ui/button';
 import { ScrollAnimation } from '@/components/ScrollAnimation';
+import ContactSection from './Contact';
 export default function HomePage() {
   const SecondRef = useRef<HTMLDivElement | null>(null);
   return (
@@ -130,6 +131,9 @@ export default function HomePage() {
       <div id="second" className="min-h-screen w-full bg-gradient-to-b from-purple-200 to-pink-200">
         {/* <About /> */}
         <FAQs />
+      </div>
+      <div className="flex min-h-screen w-full items-center justify-center bg-gradient-to-b from-purple-200 to-pink-200">
+        <ContactSection />
       </div>
     </>
   );
