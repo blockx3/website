@@ -17,7 +17,7 @@ class RabbitMQConnection {
     else this.connected = true;
     try {
       this.connection = await amqplib.connect(
-        `amqp://${rmqUser}:${rmqPass}@${rmqhost}:5672/Blockx3_website`,
+        `amqp://${rmqUser}:${rmqPass}@${rmqhost}:5672/bx3_website`,
       );
       this.channel = await this.connection.createChannel();
       this.channel.assertExchange(this.exchange, 'fanout', {
