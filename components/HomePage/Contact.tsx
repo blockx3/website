@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -19,20 +18,18 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 export default function ContactSection() {
-  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const { toast } = useToast();
 
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
     reset,
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
   });
 
   const onSubmit: SubmitHandler<FormData> = async (data) => {
-    setIsSubmitting(true);
     try {
       const result = await HandleContactUs(data);
       if (result.success) {
@@ -51,8 +48,6 @@ export default function ContactSection() {
           error instanceof Error ? error.message : 'Failed to send message. Please try again.',
         variant: 'destructive',
       });
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -73,8 +68,9 @@ export default function ContactSection() {
               type="email"
               placeholder="Your email"
               {...register('email')}
-              className={`w-full rounded-lg border px-4 py-3 text-lg focus:border-transparent focus:ring-4 focus:ring-blue-400 ${errors.email ? 'border-red-500' : 'border-gray-300'
-                }`}
+              className={`w-full rounded-lg border px-4 py-3 text-lg focus:border-transparent focus:ring-4 focus:ring-blue-400 ${
+                errors.email ? 'border-red-500' : 'border-gray-300'
+              }`}
             />
             {errors.email && <p className="text-sm text-red-500">{errors.email.message}</p>}
           </div>
@@ -82,8 +78,9 @@ export default function ContactSection() {
             <Textarea
               placeholder="Your message"
               {...register('message')}
-              className={`w-full rounded-lg border px-4 py-3 text-lg focus:border-transparent focus:ring-4 focus:ring-blue-400 ${errors.message ? 'border-red-500' : 'border-gray-300'
-                }`}
+              className={`w-full rounded-lg border px-4 py-3 text-lg focus:border-transparent focus:ring-4 focus:ring-blue-400 ${
+                errors.message ? 'border-red-500' : 'border-gray-300'
+              }`}
               rows={5}
             />
             {errors.message && <p className="text-sm text-red-500">{errors.message.message}</p>}
