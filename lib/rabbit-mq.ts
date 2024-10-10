@@ -20,6 +20,11 @@ class RabbitMQConnection {
         `amqp://${rmqUser}:${rmqPass}@${rmqhost}:5672/bx3_website`,
       );
       this.channel = await this.connection.createChannel();
+      this.channel.on('close', () => {
+        setTimeout(() => {
+          this.connect();
+        }, 5000);
+      });
       this.channel.assertExchange(this.exchange, 'fanout', {
         durable: true,
       });
@@ -31,10 +36,10 @@ class RabbitMQConnection {
   }
 
   async SendEmailToRMQ(message: Object) {
+    if (!this.channel) {
+      await this.connect();
+    }
     try {
-      if (!this.channel) {
-        await this.connect();
-      }
       const res = this.channel.publish(this.exchange, '', Buffer.from(JSON.stringify(message)), {
         contentType: 'application/json',
       });
@@ -44,10 +49,11 @@ class RabbitMQConnection {
         console.error(`Failed to send message to RMQ Server`);
       }
     } catch (error) {
-      console.error(error);
-      throw error;
+      console.log(error);
+      console.log('Reconnecting');
+      await this.connect();
     }
   }
 }
 
-export const RMQClient = new RabbitMQConnection({ exchange: 'email' });
+export const RMQClient = new RabbitMQConnection({ exchange: 'contact_us' });
