@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import FAQs from './FAQs';
 import { Button } from '../ui/button';
 import { ScrollAnimation } from '@/components/ScrollAnimation';
+import { Vision } from './Vision';
 import ContactSection from './Contact';
 export default function HomePage() {
   const SecondRef = useRef<HTMLDivElement | null>(null);
@@ -127,6 +128,7 @@ export default function HomePage() {
           </div>
         </main>
       </div>
+      <Vision />
       <ScrollAnimation RefForScroll={SecondRef} />
       <FAQs />
       <div className="items-center bg-gradient-to-b from-purple-200 to-pink-200 lg:flex">
