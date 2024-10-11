@@ -9,43 +9,22 @@ import {
 } from '@/components/ui/accordion';
 
 function FAQs() {
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   return (
-    <>
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={fadeIn}
-        transition={{ duration: 0.1 }}
-        className="w-full bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 px-4 py-10 lg:px-20 lg:py-24"
-      >
-        <motion.h2
-          className="mb-9 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text pb-8 text-3xl font-bold text-transparent lg:text-5xl"
-          variants={fadeIn}
-          transition={{ duration: 0.2 }}
-        >
-          Frequently Asked Questions :
-        </motion.h2>
-        <Accordion type="single" collapsible className="space-y-9">
-          {faqData.map((faq, index) => (
-            <motion.div key={faq.id} variants={fadeIn} transition={{ delay: 0.1 * (index + 1) }}>
-              <AccordionItem value={faq.id} className="border-none">
-                <AccordionTrigger className="rounded-xl bg-white bg-opacity-50 p-4 text-xl font-semibold text-gray-700 transition-all duration-300 hover:bg-opacity-75 hover:text-purple-700 lg:text-2xl">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="mt-2 rounded-xl bg-white bg-opacity-25 p-4 text-black lg:text-lg">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            </motion.div>
-          ))}
-        </Accordion>
-      </motion.div>
-    </>
+    <div className="border-b-2 border-t-2 py-16 lg:px-20">
+      <div className="px-4 text-2xl font-semibold lg:py-8 lg:text-5xl">FAQs:</div>
+      <Accordion type="single" collapsible className="space-y-4">
+        {faqData.map((faq, index) => (
+          <AccordionItem key={index} value={faq.id} className="border-none">
+            <AccordionTrigger className="px-4 text-lg font-semibold text-gray-600 transition-all duration-300 hover:bg-opacity-75 hover:text-purple-700 lg:text-2xl">
+              {faq.question}
+            </AccordionTrigger>
+            <AccordionContent className="rounded-lg bg-slate-100 p-4 text-black lg:mx-6 lg:text-lg">
+              {faq.answer}
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </div>
   );
 }
 

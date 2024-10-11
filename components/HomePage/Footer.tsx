@@ -25,7 +25,7 @@ const SocialIcon: React.FC<SocialIconProps> = ({ href, icon: Icon, hoverColor })
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-gradient-to-br from-blue-100 to-purple-300 px-4 py-12 text-gray-600 transition-colors duration-300 dark:from-gray-800 dark:to-gray-900 dark:text-gray-300 sm:px-6 lg:px-8">
+    <footer className="bg-indigo-100/50 px-4 py-12 text-gray-600 transition-colors duration-300 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col justify-between space-y-16 md:flex-row md:space-y-0">
           <div className="flex flex-col">
@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
                 height={40}
                 className="mr-3"
               />
-              <span className="text-xl font-bold text-gray-900 dark:text-white">BLOCKX3</span>
+              <span className="text-xl font-bold text-gray-900 dark:text-white">BlockX3</span>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400">
               Driving <span className="font-bold">Innovation</span> into{' '}
