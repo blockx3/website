@@ -15,20 +15,46 @@ export function ScrollAnimation({
   RefForScroll: React.MutableRefObject<HTMLDivElement | null>;
 }) {
   return (
-    <div className="bg-gray-300" ref={RefForScroll}>
+    <div className="bg-gradient-to-b from-purple-200 to-pink-200">
       <TextParallaxContent
         imgUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         subheading="Collaborate"
         heading="Built and deploy together."
       >
-        <WhoAreWe />
+        <div
+          className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12"
+          ref={RefForScroll}
+        >
+          <h2 className="col-span-1 text-3xl font-bold md:col-span-4">Who are we ?</h2>
+          <div className="col-span-1 md:col-span-8">
+            <p className="mb-4 text-xl text-neutral-700 md:text-2xl">
+              We are a group of passionate people who create open-source projects, support naval
+              ideas, and help them grow. Our community focuses on developing innovative software and
+              supporting individual developers by contributing to their projects.
+            </p>
+          </div>
+        </div>
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         subheading="Thrive"
         heading="In Our Community."
       >
-        <WhatWeDo />
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
+          <h2 className="col-span-1 text-3xl font-bold md:col-span-4">What we do?</h2>
+          <div className="col-span-1 md:col-span-8">
+            <p className="mb-4 text-xl text-neutral-700 md:text-2xl">
+              BlockX3 is a collaborative platform designed to facilitate teamwork on open-source
+              projects. We focus on developing open-source software and invite individuals with
+              innovative ideas to join us. Our community is dedicated to nurturing these projects,
+              fostering an environment where everyone can thrive and achieve their goals. While some
+              members aspire to create the next leading technology company, others seek to enhance
+              their skills or share their expertise. Our collective enthusiasm for growth, learning,
+              and exploration unites us as a community. The name &quot;BlockX3&quot; reflects our
+              commitment to unity and our ambition to exceed our own expectations by three times.
+            </p>
+          </div>
+        </div>
       </TextParallaxContent>
     </div>
   );
@@ -124,34 +150,3 @@ const OverlayCopy: React.FC<OverlayCopyProps> = ({ subheading, heading }) => {
     </motion.div>
   );
 };
-
-const WhatWeDo: React.FC = () => (
-  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-    <h2 className="col-span-1 text-3xl font-bold md:col-span-4">What we do?</h2>
-    <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-700 md:text-2xl">
-        BlockX3 is a collaborative platform designed to facilitate teamwork on open-source projects.
-        We focus on developing open-source software and invite individuals with innovative ideas to
-        join us. Our community is dedicated to nurturing these projects, fostering an environment
-        where everyone can thrive and achieve their goals. While some members aspire to create the
-        next leading technology company, others seek to enhance their skills or share their
-        expertise. Our collective enthusiasm for growth, learning, and exploration unites us as a
-        community. The name &quot;BlockX3&quot; reflects our commitment to unity and our ambition to
-        exceed our own expectations by three times.
-      </p>
-    </div>
-  </div>
-);
-
-const WhoAreWe: React.FC = () => (
-  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-    <h2 className="col-span-1 text-3xl font-bold md:col-span-4">Who are we ?</h2>
-    <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-700 md:text-2xl">
-        We are a group of passionate people who create open-source projects, support naval ideas,
-        and help them grow. Our community focuses on developing innovative software and supporting
-        individual developers by contributing to their projects.
-      </p>
-    </div>
-  </div>
-);
